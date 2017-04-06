@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShoppingCart</title>
+    <%= csrf_meta_tags %>
+		
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+ 
+          
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+		
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+
+  <body>
+  <%= render 'shared/navbar' %>
+	<div class="container">
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+	
+    	<%= yield %>
+    </div>
+    <script>
+	    $(document).on('turbolinks:load', function(){
+		   $(".button-collapse").sideNav();
+		});
+
+		$(document).ready(function() {
+				$(".button-collapse").sideNav();
+				$('select').material_select();
+		});
+
+       
+	</script>
+  </body>
+
+</html>
